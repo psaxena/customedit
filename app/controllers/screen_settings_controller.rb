@@ -56,7 +56,7 @@ class ScreenSettingsController < ApplicationController
 
     respond_to do |format|
       if @screen_setting.update_attributes(params[:screen_setting])
-        format.json { head :no_content }
+        format.json { render json: @screen_setting, status: :ok }
       else
         format.json { render json: @screen_setting.errors, status: :unprocessable_entity }
       end

@@ -85,8 +85,9 @@
 										<input type="text" placeholder="Enter Page Title Here" id="screen_setting_title" name="title" class="form-control">
 									</div>
 								</div>
-								<input type="hidden" name="name"  id="screen_setting_name" >
-								<input type="hidden" name="id"  id="screen_setting_id" >
+								<input disabled="disabled" type="hidden" style="display:none" name="name"  id="screen_setting_name" >
+								<input disabled="disabled" type="hidden" style="display:none" name="id"  id="screen_setting_id" >
+								
 								<div class="control-group">
 									<label for="id-role" class="control-label">Font Family</label>
 									<div class="controls">
@@ -106,7 +107,7 @@
 					</div>
 					<div class="modal-footer">
 						<a id="id-update-title" data-dismiss="modal" class="btn btn-primary"> <i id="id-btn-workflow-add-progress"></i><span>Change</span> </a>
-						<button type="button" class="btn btn-default" data-dismiss="modal">
+						<button type="button" id="close-setting-modal" class="btn btn-default" data-dismiss="modal">
 							Close
 						</button>
 					</div>
