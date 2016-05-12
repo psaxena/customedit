@@ -2,9 +2,6 @@ Customedit::Application.routes.draw do
   resources :screen_settings
 
 
-  resources :screens
-
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
