@@ -36,12 +36,17 @@ $(function() {
 		}).fail(function(msg) {
 		});
 	}
+	
+	function updateVal(jscolor){
+		console.log("================jscolor=================="+jscolor)
+		$('#screen_setting_color').val(jscolor);
+	}
 
 	function updateEditSettingForm(data) {
 		$('.font-changable').css("font-family", data["font"]);
 		// $('.color-changable').css('color', data["color"]);
 		$(document).prop('title', data["title"]);
-		$("#main-content").css("background-color", data["color"]); 
+		$("#main-content").css("background-color", "#"+data["color"]); 
 
 		$('#screen_setting_id').val(data["id"]);
 		$('#screen_setting_name').val(data["screen_name"]);
@@ -70,7 +75,6 @@ $(function() {
 
 		// var locationData = '{"location" : ' + JSON.stringify(locationHash) + '}';
 		var settingData = '{"screen_setting" : ' + JSON.stringify(ConvertFormToJSON(jQuery("form#update_setting"))) + '}';
-
 		$.ajax({
 			url : "/screen_settings/" + $('#screen_setting_id').val(),
 			type : "PUT",
