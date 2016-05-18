@@ -1,4 +1,4 @@
-<div class="container">
+<div id="main-content" class="container">
 	<div class="jumbotron font-changable color-changable">
 		<h1>My First SPA Page</h1>
 		<p>
@@ -74,16 +74,32 @@
 						<div class="control-group">
 							<label for="id-role" class="control-label">Font Family</label>
 							<div class="controls">
-								<input type="text" placeholder="Font Family eg. Arial" id="screen_setting_font" class="form-control" name="font">
+								<select id="screen_setting_font" class="form-control"  name="font">
+									<option style="font-family: 'Comic Sans MS'">Comic Sans MS</option>
+									<option style="font-family: Arial">Arial</option>
+									<option style="font-family: 'Times New Roman'">Times New Roman</option>
+									<option style="font-family: 'verdana, arial, helvetica, sans-serif'">verdana, arial, helvetica, sans-serif</option>
+									<option style="font-family: 'tangerine'">Tangerine</option>
+									<option style="font-family: 'tahoma'">Tahoma</option>
+								</select>
 							</div>
 						</div>
 
 						<div class="control-group " >
-							<label for="id-email" class="control-label">Text Color</label>
+							<label for="id-email" class="control-label">Background Color</label>
 							<div class="controls">
-								<input type="text" placeholder="Enter text color here" id="screen_setting_color" class="form-control" name="color">
+								<input type="text"   placeholder="Enter text color here" id="screen_setting_color" class="form-control" name="color">
+								<input type="text" class="jscolor" value="ab2567">
 							</div>
 						</div>
+
+						<!-- <div class="control-group " >
+						<label for="id-email" class="control-label">Background Color</label>
+						<div class="controls">
+						<input type="text"  placeholder="Enter text color here" id="screen_setting_bg_color" class="form-control" name="bg_color">
+						<input type="text"  class="jscolor" value="ab2567">
+						</div>
+						</div> -->
 
 					</fieldset>
 				</form>

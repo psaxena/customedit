@@ -13,6 +13,16 @@
  */
 
 $(function() {
+
+	// $('#screen_setting_color').colorpickerplus();
+	// $('#screen_setting_color').on('changeColor', function(e) {
+		// if (e.color == null)
+			// $(this).val('transparent').css('background-color', '#000');
+		// //tranparent
+		// else
+			// $(this).val(e.color).css('background-color', e.color);
+	// });
+
 	initializeUI();
 
 	function initializeUI() {
@@ -21,7 +31,6 @@ $(function() {
 			method : "GET",
 			contentType : "application/json",
 			success : function(data) {
-
 				updateEditSettingForm(data);
 			}
 		}).fail(function(msg) {
@@ -30,14 +39,16 @@ $(function() {
 
 	function updateEditSettingForm(data) {
 		$('.font-changable').css("font-family", data["font"]);
-		$('.color-changable').css('color', data["color"]);
+		// $('.color-changable').css('color', data["color"]);
 		$(document).prop('title', data["title"]);
+		$("#main-content").css("background-color", data["color"]); 
 
 		$('#screen_setting_id').val(data["id"]);
 		$('#screen_setting_name').val(data["screen_name"]);
 		$('#screen_setting_title').val(data["title"]);
 		$('#screen_setting_font').val(data["font"]);
 		$('#screen_setting_color').val(data["color"]);
+
 	}
 
 	function ConvertFormToJSON(form) {

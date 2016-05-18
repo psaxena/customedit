@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160512084926) do
+ActiveRecord::Schema.define(:version => 20160518080847) do
 
   create_table "screen_settings", :force => true do |t|
     t.string   "screen_name"
